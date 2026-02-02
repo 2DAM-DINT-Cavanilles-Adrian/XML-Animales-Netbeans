@@ -7,8 +7,12 @@
  *
  * @author adrgimmun
  */
+
+
+
 public class VentanaAnimales extends javax.swing.JFrame {
     
+    private java.util.List<String> animales = new java.util.ArrayList<>();
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaAnimales.class.getName());
 
     /**
@@ -45,6 +49,11 @@ public class VentanaAnimales extends javax.swing.JFrame {
         });
 
         btnAgregar.setText("Agregar");
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
 
         btnGenerar.setText("Generar XML");
 
@@ -102,6 +111,22 @@ public class VentanaAnimales extends javax.swing.JFrame {
     private void txtListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtListaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtListaActionPerformed
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        // TODO add your handling code here:
+        String nombre = txtAnimal.getText().trim();
+        if (!nombre.isEmpty()) {
+         if (animales.size() < 5) {
+         animales.add(nombre);
+         txtLista.append(nombre + "");
+         txtAnimal.setText("");
+         } else {
+         javax.swing.JOptionPane.showMessageDialog(this, "Ya has introducido cinco animales.");
+         }
+        } else {
+         javax.swing.JOptionPane.showMessageDialog(this, "Introduce un nombre.");
+        }
+    }//GEN-LAST:event_btnAgregarActionPerformed
 
     /**
      * @param args the command line arguments
