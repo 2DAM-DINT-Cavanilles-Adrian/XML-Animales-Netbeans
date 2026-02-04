@@ -38,6 +38,7 @@ public class VentanaLecturaAnimales extends javax.swing.JFrame {
     private void initComponents() {
 
         btnLeer = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
         panelAnimales = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,29 +54,31 @@ public class VentanaLecturaAnimales extends javax.swing.JFrame {
         panelAnimales.setLayout(panelAnimalesLayout);
         panelAnimalesLayout.setHorizontalGroup(
             panelAnimalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 355, Short.MAX_VALUE)
+            .addGap(0, 521, Short.MAX_VALUE)
         );
         panelAnimalesLayout.setVerticalGroup(
             panelAnimalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 227, Short.MAX_VALUE)
+            .addGap(0, 240, Short.MAX_VALUE)
         );
+
+        jScrollPane2.setViewportView(panelAnimales);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLeer, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(panelAnimales, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(panelAnimales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnLeer)
                 .addGap(17, 17, 17))
@@ -137,6 +140,7 @@ public class VentanaLecturaAnimales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLeer;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel panelAnimales;
     // End of variables declaration//GEN-END:variables
 }
